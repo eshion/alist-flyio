@@ -5,7 +5,7 @@ mkdir -p /opt/alist/data/
 cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
-  "port": 2233,
+  "port": 443,
   "assets": "local",
   "database": {
     "type": "$DATABASE",
