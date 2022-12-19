@@ -12,9 +12,8 @@ if [ -z "${APP_NAME}" ]; then
 fi
 
 flyctl info --app "${APP_NAME}" >/tmp/${APP_NAME} 2>&1;
-cat /tmp/${APP_NAME}
 
-if [ "$(cat /tmp/${APP_NAME} | grep -o "Could not resolve App")" = "Could not resolve App" ]; then
+if [ "$(cat /tmp/${APP_NAME} | grep -o "Could not find App")" = "Could not find App" ]; then
     printf '\e[33m进度2/5：创建应用\n\e[0m'
     flyctl apps create "${APP_NAME}" >/dev/null 2>&1;
 
