@@ -32,4 +32,4 @@ EOF
 
 cd /opt/alist
 chmod +x alist
-./alist server --config ./data/config.json
+./alist --config ./data/config.json
