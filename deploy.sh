@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 REGION="ams"
 
 if ! command -v flyctl >/dev/null 2>&1; then
