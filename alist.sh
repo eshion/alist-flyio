@@ -28,6 +28,7 @@ cat >/opt/alist/data/config.json <<EOF
   }
 }
 EOF
+cat /opt/alist/data/config.json
 
 cd /opt/alist
 chmod +x alist
