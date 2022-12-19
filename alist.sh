@@ -30,5 +30,6 @@ cat >/opt/alist/data/config.json <<EOF
 EOF
 
 cd /opt/alist
-chmod +x alist 
+chmod +x alist
 ./alist server --data ./data
+./alist admin
