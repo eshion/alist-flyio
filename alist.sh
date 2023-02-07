@@ -1,12 +1,15 @@
+#!/usr/bin/env sh
 
 # 创建配置文件目录
 mkdir -p /opt/alist/data/
+mkdir -p /opt/alist/data/temp
 
 cat > /opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": 443,
   "assets": "local",
+  "temp_dir": "/opt/alist/data/temp",
   "database": {
     "type": "$DATABASE",
     "user": "$SQLUSER",
