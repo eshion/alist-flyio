@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 
 # 创建配置文件目录
-mkdir -p /opt/alist/data/
 mkdir -p /opt/alist/data/temp
+
+echo "============config==========="
 
 cat > /opt/alist/data/config.json <<EOF
 {
@@ -34,5 +35,5 @@ EOF
 cd /opt/alist
 chmod +x alist
 #./alist --data ./data
-cat /opt/alist/data/config.json
+cat data/config.json
 ./alist -conf /opt/alist/data/config.json
