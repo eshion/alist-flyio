@@ -31,4 +31,5 @@ EOF
 cd /opt/alist
 chmod +x alist
 #./alist --data ./data
+cat /opt/alist/data/config.json
 ./alist -conf /opt/alist/data/config.json
