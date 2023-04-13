@@ -39,7 +39,7 @@ processes = []
   auto_rollback = true
 [[services]]
   http_checks = []
-  internal_port = 443
+  internal_port = 8080
   # processes = ["app"]
   protocol = "tcp"
   script_checks = []
