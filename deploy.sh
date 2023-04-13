@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REGION="ams"
+REGION="hkg"
 
 if ! command -v flyctl >/dev/null 2>&1; then
     printf '\e[33m进度1/5：安装Fly.io CLI。\n\e[0m'
