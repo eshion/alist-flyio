@@ -1,16 +1,13 @@
 #!/usr/bin/env sh
 
 # 创建配置文件目录
-mkdir -p /opt/alist/data/temp
+mkdir -p /opt/alist/data/
 
-echo "============config==========="
-
-cat > /opt/alist/data/config.json <<EOF
+cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": 8080,
   "assets": "local",
-  "temp_dir": "/opt/alist/data/temp",
   "database": {
     "type": "$DATABASE",
     "user": "$SQLUSER",
@@ -32,8 +29,9 @@ cat > /opt/alist/data/config.json <<EOF
   }
 }
 EOF
+
 cd /opt/alist
-chmod +x alist
-#./alist --data ./data
+
 cat data/config.json
-./alist -config /opt/alist/data/config.json
+./alist --help
+./alist -conf data/config.json
