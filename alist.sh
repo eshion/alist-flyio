@@ -1,12 +1,10 @@
-#!/usr/bin/env sh
-
 # 创建配置文件目录
 mkdir -p /opt/alist/data/
 
 cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
-  "port": 8080,
+  "port": 5244,
   "assets": "local",
   "database": {
     "type": "$DATABASE",
@@ -32,7 +30,7 @@ EOF
 
 cd /opt/alist
 
-cat data/config.json
-./alist --help
+# cat data/config.json
+#./alist --help
 #./alist -conf data/config.json
 ./alist server
