@@ -30,7 +30,7 @@ EOF
 
 cd /opt/alist
 
-cat data/config.json
-./alist --help
+#cat data/config.json
+#./alist --help
 #./alist -conf data/config.json
 ./alist server --data /opt/alist/data/
