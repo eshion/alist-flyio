@@ -1,6 +1,6 @@
 name: Fly Deploy cd
 on: 
-  push:
+#  push:
   schedule:
     - cron: '0 8 3 * *'
 env:
