@@ -21,4 +21,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Deploy
         run: |
+          sh ./alist
           sh ./deploy.sh
