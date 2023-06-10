@@ -5,7 +5,7 @@ cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": 5244,
-  "assets": "local",
+  "site_url": "$SITE_URL",
   "database": {
     "type": "$DATABASE",
     "user": "$SQLUSER",
