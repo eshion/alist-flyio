@@ -8,7 +8,7 @@ echo "============config==========="
 cat > /opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
-  "port": 443,
+  "port": 8080,
   "assets": "local",
   "temp_dir": "/opt/alist/data/temp",
   "database": {
