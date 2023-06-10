@@ -1,3 +1,8 @@
-FROM nocodb/nocodb:latest
+FROM xhofe/alist:latest
+LABEL MAINTAINER="i@nn.ci"
 
-ENTRYPOINT ["sh", "/usr/src/appEntry/start.sh"]
+RUN chmod -R 777 /opt/alist/data
+ADD alist.sh /alist.sh
+RUN chmod +x /alist.sh
+
+CMD /alist.sh
