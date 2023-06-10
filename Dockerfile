@@ -2,10 +2,6 @@ FROM xhofe/alist:latest
 LABEL MAINTAINER="i@nn.ci"
 WORKDIR /opt/alist/
 
-EXPOSE 2233
+EXPOSE 5244
 
-RUN chmod -R 777 /opt/alist/data
-ADD alist.sh /alist.sh
-RUN chmod +x /alist.sh
-
-CMD /alist.sh
+CMD [ "./alist", "server", "--no-prefix" ]
