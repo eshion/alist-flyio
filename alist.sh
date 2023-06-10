@@ -2,7 +2,7 @@
 cat > ./config.json <<EOF
 {
   "address": "0.0.0.0",
-  "port": 2233,
+  "port": 5244,
   "assets": "local",
   "database": {
     "type": "$DATABASE",
