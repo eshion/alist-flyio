@@ -1,7 +1,5 @@
 #!/bin/sh
 
-REGION="nrt"
-
 export FLYCTL_INSTALL="/home/runner/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
@@ -33,6 +31,7 @@ fi
 printf '\e[33m进度3/5：创建配置文件\n\e[0m'
 cat <<EOF >./fly.toml
 app = "$APP_NAME"
+primary_region = "nrt"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -71,7 +70,6 @@ flyctl secrets set SQLPASSWORD="${SQLPASSWORD}"
 flyctl secrets set SQLHOST="${SQLHOST}"
 flyctl secrets set SQLPORT="${SQLPORT}"
 flyctl secrets set SQLNAME="${SQLNAME}"
-flyctl regions set ${REGION}
 printf '\e[32m进度5/5：部署\n\e[0m'
-flyctl deploy --detach
+flyctl deploy --detach --ha=false
 # flyctl status --app ${APP_NAME}
