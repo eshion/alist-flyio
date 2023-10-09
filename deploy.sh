@@ -4,7 +4,8 @@ REGION="nrt"
 
 if ! command -v flyctl >/dev/null 2>&1; then
     printf '\e[33m进度1/5：安装Fly.io CLI。\n\e[0m'
-    curl -L https://fly.io/install.sh | sh
+    curl -L https://fly.io/install.sh | FLYCTL_INSTALL=/home/runner/.fly sh
+    export PATH="$FLYCTL_INSTALL/bin:$PATH"
 fi
 
 if [ -z "${APP_NAME}" ]; then
