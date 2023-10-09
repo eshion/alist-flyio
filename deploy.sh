@@ -31,7 +31,7 @@ fi
 printf '\e[33m进度3/5：创建配置文件\n\e[0m'
 cat <<EOF >./fly.toml
 app = "$APP_NAME"
-primary_region = "nrt"
+primary_region = "hkg"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -71,6 +71,6 @@ flyctl secrets set SQLHOST="${SQLHOST}"
 flyctl secrets set SQLPORT="${SQLPORT}"
 flyctl secrets set SQLNAME="${SQLNAME}"
 printf '\e[32m进度5/5：部署\n\e[0m'
-flyctl deploy --detach --ha=false
-flyctl scale count 1 --yes
+flyctl scale count 1
+flyctl deploy --ha=false --detach
 # flyctl status --app ${APP_NAME}
