@@ -31,7 +31,7 @@ fi
 printf '\e[33m进度3/5：创建配置文件\n\e[0m'
 cat <<EOF >./fly.toml
 app = "$APP_NAME"
-primary_region = "hkg"
+primary_region = "nrt"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
