@@ -71,5 +71,6 @@ flyctl secrets set SQLHOST="${SQLHOST}"
 flyctl secrets set SQLPORT="${SQLPORT}"
 flyctl secrets set SQLNAME="${SQLNAME}"
 printf '\e[32m进度5/5：部署\n\e[0m'
-flyctl deploy --detach --ha=false
+flyctl deploy --detach
+flyctl scale count 1 --yes
 # flyctl status --app ${APP_NAME}
