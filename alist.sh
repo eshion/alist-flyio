@@ -1,3 +1,8 @@
+#!/bin/bash
+chown -R ${PUID}:${PGID} /opt/alist/
+
+umask ${UMASK}
+
 # 创建配置文件目录
 mkdir -p /opt/alist/data/
 
@@ -29,6 +34,12 @@ cat >/opt/alist/data/config.json <<EOF
 }
 EOF
 
-cd /opt/alist
-./alist server
+# cd /opt/alist
+# ./alist server
+exec su-exec ${PUID}:${PGID} nohup aria2c \
+  --enable-rpc \
+  --rpc-allow-origin-all \
+  --conf-path=/root/.aria2/aria2.conf \
+  >/dev/null 2>&1 &
 
+exec su-exec ${PUID}:${PGID} ./alist server --no-prefix
