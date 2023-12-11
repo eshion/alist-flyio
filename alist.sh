@@ -34,7 +34,7 @@ cat >/opt/alist/data/config.json <<EOF
 }
 EOF
 
-# cd /opt/alist
+cd /opt/alist
 # ./alist server
 exec su-exec ${PUID}:${PGID} nohup aria2c \
   --enable-rpc \
@@ -42,4 +42,4 @@ exec su-exec ${PUID}:${PGID} nohup aria2c \
   --conf-path=/root/.aria2/aria2.conf \
   >/dev/null 2>&1 &
 
-exec su-exec ${PUID}:${PGID} ./alist server --no-prefix
+exec su-exec ${PUID}:${PGID} ./alist server
