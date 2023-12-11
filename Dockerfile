@@ -1,4 +1,4 @@
-FROM xhofe/alist:latest
+FROM xhofe/alist-aria2:latest
 LABEL MAINTAINER="i@nn.ci"
 EXPOSE 5244
 RUN mkdir -p /opt/alist/data
