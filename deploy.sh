@@ -12,7 +12,7 @@ if [ -z "${APP_NAME}" ]; then
     printf '\e[31m错误：未指定APP名称。\n\e[0m' && exit 1
 fi
 
-cat "${APP_NAME}"
+echo "${APP_NAME}"
 flyctl info --app "${APP_NAME}"
 
 flyctl info --app "${APP_NAME}" >/tmp/${APP_NAME} 2>&1;
