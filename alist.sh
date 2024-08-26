@@ -35,6 +35,9 @@ mkdir -p /opt/alist/data/
 # EOF
 
 cd /opt/alist
+
+cat data/config.json
+
 # ./alist server
 exec su-exec ${PUID}:${PGID} nohup aria2c \
   --enable-rpc \
